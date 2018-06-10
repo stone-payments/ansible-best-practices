@@ -1,0 +1,5 @@
+---
+- name: Configure webserver {{ webserver_item.name }}
+  debug: 
+    msg: "Suppose this is a template task generating an nginx.conf file or something like that"
+  tags: good
