@@ -1,0 +1,34 @@
+---
+- name: Always name tasks
+  hosts: localhost
+  gather_facts: false
+  connection: local
+  vars:
+    http_port: 80
+    webservers:
+      - name: web1
+        http_port: 80
+      - name: web2
+        http_port: 443
+
+  tasks:
+    - name: Configure webserver on {{ http_port }}
+      debug: 
+        msg: "Suppose this is a template task generating an nginx.conf file or something like that"
+      tags: bad
+    - name: Configure webserver
+      debug: 
+        msg: "Suppose this is a template task generating an nginx.conf file or something like that"
+      tags: good
+
+    # suppose this include was necessary. Always prefer to loop inside the final task with loop/with_items when possible.
+    - name: Include webserver generation tasks
+      include_tasks: webserver.yml
+      loop_control:
+        loop_var: webserver_item
+      with_items: "{{ webservers }}"
+      tags: good
+
+
+
+    
