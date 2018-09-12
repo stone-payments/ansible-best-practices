@@ -91,7 +91,7 @@ Use any scheme you want but keep it consistent. In our case we are adopting:
 
 - Roles: **ansible-rolename**
   - tags: ansible, ansible-role
-- Infrastructure playbooks: **productname-infra**
+- Infrastructure playbooks: **infra-productname**
   - tags: ansible, ansible-project
 
 Note that for the main (playbook) repos we are aggregating by product. The product may be composed by many applications but we code all its infra in the same repo. Also note that we avoid the name ansible on that repo 'cause eventually the product's infra may be managed by other tools (terraform, puppet), or many of them combined.
