@@ -4,7 +4,7 @@ Ansible Best Practices by Stone Payments team
 
 ## Overview
 
-The main reference for ansible best practices is the official documentation: [Best Practices](https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html). Everyone workinmg with ansible **must** read it.
+The main reference for ansible best practices is the official documentation: [Best Practices](https://docs.ansible.com/ansible/latest/user_guide/playbooks_best_practices.html). Everyone working with ansible **must** read it.
 
 This guide replicates some (not all) of the content on the official guide, the points we consider most important, to emphasize them. We also add here many other practices and tips that we consider important and useful.
 
